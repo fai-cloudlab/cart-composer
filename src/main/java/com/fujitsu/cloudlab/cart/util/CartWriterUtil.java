@@ -83,7 +83,7 @@ public class CartWriterUtil {
         customer.setEmailAdr(offer.getCustomer().getEmailAddress());
         customer.setFirstName(offer.getCustomer().getFirstName());
         customer.setLastName(offer.getCustomer().getLastName());
-        cartOffer.setCustomer(customer);
+        cartOffer.setCustomers(customer);
 
         // cartOffer.setPaymentTimeLimitUtcTs(offer.get);
 
