@@ -25,7 +25,7 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class CartWriterUtil {
+public class CartComposerUtil {
 
   @Value("${cart.exp.duration}")
   private long expTime;
@@ -41,7 +41,7 @@ public class CartWriterUtil {
 
     Cart cart = new Cart();
     long currDate = System.currentTimeMillis();
-    
+
     cart.setCartExpirationTime(new Date(currDate + expTime).toString());
     cart.setCartId(request.getCartId().toString());
 
@@ -67,6 +67,8 @@ public class CartWriterUtil {
       } catch (ApiException e) {
         // TODO Auto-generated catch block
         e.printStackTrace();
+      } catch (Exception ex) {
+    	  ex.printStackTrace();
       }
 
       Offer cartOffer;

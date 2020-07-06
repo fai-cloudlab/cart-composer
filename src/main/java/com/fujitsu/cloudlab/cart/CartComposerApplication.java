@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @ImportAutoConfiguration({RestConfig.class, ApiErrorHandler.class})
-public class CartWriterApplication {
+public class CartComposerApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(CartWriterApplication.class, args);
+    SpringApplication.run(CartComposerApplication.class, args);
   }
 }
